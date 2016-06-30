@@ -1,0 +1,10 @@
+<h1>Recipes</h1>
+<!-- Iterate over the recipes var that was created in the ApplicationController -->
+<% @recipes.each do |recipe| %>
+<!-- Output each one -->
+<%= recipe.name %>
+<%= recipe.ingredients %>
+<%= recipe.cook_time %>
+<a href="/recipes/<%= recipe.id %>"></a>
+<!-- Don't forget to end the block! -->
+<% end %>
